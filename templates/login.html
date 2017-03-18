@@ -6,7 +6,7 @@
     </head>
     <body>
         <div id="signinButton">
-            <span class="g-sign"
+            <span class="g-signin"
             data-scope="openid email"
             data-clientid="1010057010613-a8nja8v329cvt4ltkbqj801ofbcul5hc.apps.googleusercontent.com"
             data-redirecturi="postmessage"
@@ -16,6 +16,7 @@
             data-approvalprompt="force">
             </span>
         </div>
+
         <div id="result"></div>
         <script>
             function signInCallback(authResult) {
@@ -42,7 +43,7 @@
                             } else if (authResult['error']) {
                                 console.log('There was an error: ' + authResult['error']);
                             } else {
-                                $('result').html('Failed to make server side call. Check your configuration and console.');
+                                $('#result').html('Failed to make server side call. Check your configuration and console.');
                             }
                         }
                     }));
